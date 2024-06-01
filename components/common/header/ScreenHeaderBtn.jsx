@@ -1,14 +1,18 @@
 import React from 'react'
-import { View, Text } from 'react-native'
-
+import {GestureHandlerRootView } from 'react-native-gesture-handler'
+import {TouchableOpacity, Image } from 'react-native'
 import styles from './screenheader.style'
 
-const ScreenHeaderBtn = () => {
+const ScreenHeaderBtn = ({iconUrl,dimension,handlePress}) => {
   return (
-    <View>
-      <Text>ScreenHeaderBtn</Text>
-    </View>
+    <GestureHandlerRootView>
+      <TouchableOpacity>
+    <Image source={iconUrl}/>
+   </TouchableOpacity>
+
+    </GestureHandlerRootView>
+   
   )
 }
 
-export default ScreenHeaderBtn
+export default ScreenHeaderBtn;
